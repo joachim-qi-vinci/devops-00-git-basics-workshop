@@ -20,12 +20,26 @@ describe("A suite of test for the berlinClock exercise of the main class", funct
         expect(result).toBe("nombre pair");
     });
     
+it ("Lampe 5' should be on", function(){
+        const nbr = 5;
+        let result = main.toBerlinClock(nbr);
+        expect(result).toBe("Lampe 5 min allumée")
+    });
 
     it ("Lampe 5' should be on", function(){
         const nbr = 7;
         let result = main.toBerlinClock(nbr);
-        expect(result).toBe("Lampe 5 min allumée + 2")
-    })
+        expect(result).toBe("1 Lampe 5 min allumée + 2")
+    });
+
+    it ("2 Lampe 5' should be on", function(){
+        const nbr = 10;
+        let result = main.toBerlinClock(nbr);
+        expect(result).toBe("2 Lampes 5 min allumées")
+    });
+
+    
+
 
 
     
