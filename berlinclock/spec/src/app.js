@@ -8,6 +8,12 @@ export class Main{
             if (number >= 10){
                 // calculating number of 5' lamp on;
                 const multiple = (number - reste)/5;
+                if (multiple === 3){
+                    if (reste === 0){
+                        return multiple + " Lampes 5 min allumées en rouge";
+                    }
+                    return multiple + " Lampes 5 min allumées en rouge + " + reste;
+                }
                 if (reste !== 0){
                     return multiple + " Lampes 5 min allumées + " + reste;
                 }

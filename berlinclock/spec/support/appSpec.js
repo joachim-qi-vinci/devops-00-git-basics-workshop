@@ -42,6 +42,18 @@ it ("Lampe 5' should be on", function(){
         expect(result).toBe("2 Lampes 5 min allumées + 3")
     });
 
+    it ("3 Lampe 5 in red + 1' should be on", function(){
+        const nbr = 15;
+        let result = main.toBerlinClock(nbr);
+        expect(result).toBe("3 Lampes 5 min allumées en rouge")
+    });
+
+    it ("3 Lampe 5 in red + 1' should be on", function(){
+        const nbr = 16;
+        let result = main.toBerlinClock(nbr);
+        expect(result).toBe("3 Lampes 5 min allumées en rouge + 1")
+    });
+
     
 
 
