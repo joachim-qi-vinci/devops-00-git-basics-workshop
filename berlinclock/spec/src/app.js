@@ -1,25 +1,26 @@
 export class Main{
     toBerlinClock(number){
-        console.log("############ " +  number + "   ##########");
+        //number above or equals 5;
         if (number >= 5){
+            //calculating number of 1' lamp on;
             const reste = number % 5
+            // number above or equals 10
             if (number >= 10){
-                const multiple = number / 5;
-                console.log(multiple + " Lampes 5 min allumées");
+                // calculating number of 5' lamp on;
+                const multiple = (number - reste)/5;
+                if (reste !== 0){
+                    return multiple + " Lampes 5 min allumées + " + reste;
+                }
                 return multiple + " Lampes 5 min allumées";
             }
             if (reste !== 0){
-                console.log(" 1 Lampe 5 min allumée + " + reste);
                 return "1 Lampe 5 min allumée + " + reste;
             }        
-           return "Lampe 5 min allumée";
+            return "Lampe 5 min allumée";
         }
-
+        //numbers below 5;
         if (number%2 === 1) return "nombre impair";
         if (number%2 === 0) return "nombre pair";
     }
-    toBerlinClock2(number){
-        console.log("########## " + number + " ###########");
-        if (number === 5) return "Lampe 5 min allumée";
-    }
+    
 }

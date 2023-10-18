@@ -3,9 +3,7 @@ import { Main } from '../src/app.js';
 
 describe("A suite of test for the berlinClock exercise of the main class", function(){
     let main = new Main();
-    
-    
-    
+        
     //let date = new Date(1776, 6, 4, 12, 30, 1, 0);
     
     it("Lampe 1 should be on", function(){   
@@ -36,6 +34,12 @@ it ("Lampe 5' should be on", function(){
         const nbr = 10;
         let result = main.toBerlinClock(nbr);
         expect(result).toBe("2 Lampes 5 min allumées")
+    });
+
+    it ("2 Lampe 5 + 1' should be on", function(){
+        const nbr = 13;
+        let result = main.toBerlinClock(nbr);
+        expect(result).toBe("2 Lampes 5 min allumées + 3")
     });
 
     
